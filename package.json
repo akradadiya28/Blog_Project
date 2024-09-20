@@ -1,0 +1,21 @@
+{
+  "name": "admin-panel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "discription": "This project aims to build an admin panel that allows users to register, sign in, and manage their profiles. After login, the user will be directed to a dashboard displaying a welcome message with their name. The admin panel will also include a profile page where users can view their personal details.",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Arpit Radadiya",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "mongoose": "^8.6.2"
+  }
+}
