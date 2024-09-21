@@ -457,7 +457,8 @@
             <div class="d-flex justify-content-end">
               <a href="#" class="btn btn-outline-secondary btn-sm text-body me-2"><i
                   class="ri-download-fill align-bottom"></i> Export Users</a>
-              <a class="btn btn-sm btn-primary" href="#"><i class="ri-add-circle-line align-bottom"></i> New User</a>
+              <a href="/register" class="btn btn-sm btn-primary" href="#"><i
+                  class="ri-add-circle-line align-bottom"></i> New User</a>
             </div>
           </div>
           <!-- /user listing Actions-->
@@ -491,31 +492,35 @@
                     <div class="d-flex justify-content-start align-items-start">
                       <div class="avatar avatar-xs me-3 flex-shrink-0">
                         <picture>
-                          <img class="f-w-10 rounded-circle" src="./assets/images/profile-small-4.jpeg" alt="">
+                          <img class="f-w-10 rounded-circle" src="<%=userImg%>" alt="<%=fname%>">
                         </picture>
                       </div>
                       <div>
-                        <p class="fw-bolder mb-1 d-flex align-items-center lh-1">Jon Smith
-                          <span class="d-block f-w-4 ms-1 lh-1 text-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                              fill="currentColor">
-                              <path fill-rule="evenodd"
-                                d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd" />
-                            </svg>
-                          </span>
+                        <p class="fw-bolder mb-1 d-flex align-items-center lh-1">
+                          <%=fname%>
+                            <%=lname%>
+                              <span class="d-block f-w-4 ms-1 lh-1 text-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                  fill="currentColor">
+                                  <path fill-rule="evenodd"
+                                    d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                                </svg>
+                              </span>
                         </p>
-                        <span class="d-block text-muted">jon@apollo.co.uk</span>
+                        <span class="d-block text-muted">
+                          <%= email %>
+                        </span>
                       </div>
                     </div>
                   </td>
-                  <td>Administrator</td>
-                  <td class="text-muted"><i class="ri-map-pin-line align-bottom"></i> London, UK</td>
-                  <td class="text-muted">24th Jan, 2021</td>
+                  <td>-</td>
+                  <td class="text-muted">-</td>
+                  <td class="text-muted">-</td>
                   <td>
                     <div class="d-flex align-items-center">
-                      <span class="f-w-2 f-h-2 bg-success d-block rounded-circle me-1 fs-xs fw-bolder"></span> <span
-                        class="small text-muted">Online</span>
+                      <!-- <span class="f-w-2 f-h-2 bg-success d-block rounded-circle me-1 fs-xs fw-bolder"></span>  -->
+                      <span class="small text-muted">-</span>
                     </div>
                   </td>
                   <td>
@@ -525,327 +530,6 @@
                         <i class="ri-more-2-line"></i>
                       </button>
                       <ul class="dropdown-menu dropdown" aria-labelledby="dropdownOrder-0">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="form-group form-check-custom mb-0">
-                      <input type="checkbox" class="form-check-input" id="filter-1">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="d-flex justify-content-start align-items-start">
-                      <button class="btn-icon bg-primary-faded text-primary fw-bolder me-3">A</button>
-                      <div>
-                        <p class="fw-bolder mb-1 d-flex align-items-center lh-1">Anne Kimber
-                        </p>
-                        <span class="d-block text-muted">anne.kimber@apollo.co.uk</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td>Sales Leader</td>
-                  <td class="text-muted"><i class="ri-map-pin-line align-bottom"></i> Manchester, UK</td>
-                  <td class="text-muted">3rd Apr, 2021</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <span class="f-w-2 f-h-2 bg-danger d-block rounded-circle me-1 fs-xs fw-bolder"></span> <span
-                        class="small text-muted">Offline</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="dropdown">
-                      <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
-                        id="dropdownOrder-1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-2-line"></i>
-                      </button>
-                      <ul class="dropdown-menu dropdown" aria-labelledby="dropdownOrder-1">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="form-group form-check-custom mb-0">
-                      <input type="checkbox" class="form-check-input" id="filter-2">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="d-flex justify-content-start align-items-start">
-                      <div class="avatar avatar-xs me-3 flex-shrink-0">
-                        <picture>
-                          <img class="f-w-10 rounded-circle" src="./assets/images/profile-small-2.jpeg" alt="">
-                        </picture>
-                      </div>
-                      <div>
-                        <p class="fw-bolder mb-1 d-flex align-items-center lh-1">Patrick Patel
-                          <span class="d-block f-w-4 ms-1 lh-1 text-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                              fill="currentColor">
-                              <path fill-rule="evenodd"
-                                d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd" />
-                            </svg>
-                          </span>
-                        </p>
-                        <span class="d-block text-muted">patrick@apollo.co.uk</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td>IT Support</td>
-                  <td class="text-muted"><i class="ri-map-pin-line align-bottom"></i> New York, US</td>
-                  <td class="text-muted">17th Feb, 2021</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <span class="f-w-2 f-h-2 bg-success d-block rounded-circle me-1 fs-xs fw-bolder"></span> <span
-                        class="small text-muted">Online</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="dropdown">
-                      <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
-                        id="dropdownOrder-2" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-2-line"></i>
-                      </button>
-                      <ul class="dropdown-menu dropdown" aria-labelledby="dropdownOrder-2">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="form-group form-check-custom mb-0">
-                      <input type="checkbox" class="form-check-input" id="filter-3">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="d-flex justify-content-start align-items-start">
-                      <div class="avatar avatar-xs me-3 flex-shrink-0">
-                        <picture>
-                          <img class="f-w-10 rounded-circle" src="./assets/images/profile-small-3.jpeg" alt="">
-                        </picture>
-                      </div>
-                      <div>
-                        <p class="fw-bolder mb-1 d-flex align-items-center lh-1">Robert Smith
-                          <span class="d-block f-w-4 ms-1 lh-1 text-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                              fill="currentColor">
-                              <path fill-rule="evenodd"
-                                d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd" />
-                            </svg>
-                          </span>
-                        </p>
-                        <span class="d-block text-muted">rob@apollo.co.uk</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td>Team Leader</td>
-                  <td class="text-muted"><i class="ri-map-pin-line align-bottom"></i> Canberra, AU</td>
-                  <td class="text-muted">24th March, 2021</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <span class="f-w-2 f-h-2 bg-success d-block rounded-circle me-1 fs-xs fw-bolder"></span> <span
-                        class="small text-muted">Online</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="dropdown">
-                      <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
-                        id="dropdownOrder-3" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-2-line"></i>
-                      </button>
-                      <ul class="dropdown-menu dropdown" aria-labelledby="dropdownOrder-3">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="form-group form-check-custom mb-0">
-                      <input type="checkbox" class="form-check-input" id="filter-4">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="d-flex justify-content-start align-items-start">
-                      <button class="btn-icon bg-primary-faded text-primary fw-bolder me-3">B</button>
-                      <div>
-                        <p class="fw-bolder mb-1 d-flex align-items-center lh-1">Barry Rogan
-                        </p>
-                        <span class="d-block text-muted">barry.rogan@apollo.co.uk</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td>Sales Support</td>
-                  <td class="text-muted"><i class="ri-map-pin-line align-bottom"></i> London, UK</td>
-                  <td class="text-muted">3rd May, 2021</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <span class="f-w-2 f-h-2 bg-danger d-block rounded-circle me-1 fs-xs fw-bolder"></span> <span
-                        class="small text-muted">Offline</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="dropdown">
-                      <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
-                        id="dropdownOrder-4" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-2-line"></i>
-                      </button>
-                      <ul class="dropdown-menu dropdown" aria-labelledby="dropdownOrder-4">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="form-group form-check-custom mb-0">
-                      <input type="checkbox" class="form-check-input" id="filter-5">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="d-flex justify-content-start align-items-start">
-                      <button class="btn-icon bg-primary-faded text-primary fw-bolder me-3">K</button>
-                      <div>
-                        <p class="fw-bolder mb-1 d-flex align-items-center lh-1">Karin Frum
-                        </p>
-                        <span class="d-block text-muted">karin.frum@apollo.co.uk</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td>Customer Support</td>
-                  <td class="text-muted"><i class="ri-map-pin-line align-bottom"></i> Manchester, UK</td>
-                  <td class="text-muted">11th Apr, 2021</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <span class="f-w-2 f-h-2 bg-danger d-block rounded-circle me-1 fs-xs fw-bolder"></span> <span
-                        class="small text-muted">Offline</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="dropdown">
-                      <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
-                        id="dropdownOrder-5" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-2-line"></i>
-                      </button>
-                      <ul class="dropdown-menu dropdown" aria-labelledby="dropdownOrder-5">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="form-group form-check-custom mb-0">
-                      <input type="checkbox" class="form-check-input" id="filter-6">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="d-flex justify-content-start align-items-start">
-                      <div class="avatar avatar-xs me-3 flex-shrink-0">
-                        <picture>
-                          <img class="f-w-10 rounded-circle" src="./assets/images/profile-small-5.jpeg" alt="">
-                        </picture>
-                      </div>
-                      <div>
-                        <p class="fw-bolder mb-1 d-flex align-items-center lh-1">Onome Sanomi
-                          <span class="d-block f-w-4 ms-1 lh-1 text-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                              fill="currentColor">
-                              <path fill-rule="evenodd"
-                                d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd" />
-                            </svg>
-                          </span>
-                        </p>
-                        <span class="d-block text-muted">onome@apollo.co.uk</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td>Administrator</td>
-                  <td class="text-muted"><i class="ri-map-pin-line align-bottom"></i> London, UK</td>
-                  <td class="text-muted">24th Jan, 2021</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <span class="f-w-2 f-h-2 bg-success d-block rounded-circle me-1 fs-xs fw-bolder"></span> <span
-                        class="small text-muted">Online</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="dropdown">
-                      <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
-                        id="dropdownOrder-6" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-2-line"></i>
-                      </button>
-                      <ul class="dropdown-menu dropdown" aria-labelledby="dropdownOrder-6">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="form-group form-check-custom mb-0">
-                      <input type="checkbox" class="form-check-input" id="filter-7">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="d-flex justify-content-start align-items-start">
-                      <div class="avatar avatar-xs me-3 flex-shrink-0">
-                        <picture>
-                          <img class="f-w-10 rounded-circle" src="./assets/images/profile-small-6.jpeg" alt="">
-                        </picture>
-                      </div>
-                      <div>
-                        <p class="fw-bolder mb-1 d-flex align-items-center lh-1">Kevin Smith
-                          <span class="d-block f-w-4 ms-1 lh-1 text-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                              fill="currentColor">
-                              <path fill-rule="evenodd"
-                                d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd" />
-                            </svg>
-                          </span>
-                        </p>
-                        <span class="d-block text-muted">kevin@apollo.co.uk</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td>Administrator</td>
-                  <td class="text-muted"><i class="ri-map-pin-line align-bottom"></i> London, UK</td>
-                  <td class="text-muted">19th Mar, 2021</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <span class="f-w-2 f-h-2 bg-success d-block rounded-circle me-1 fs-xs fw-bolder"></span> <span
-                        class="small text-muted">Online</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="dropdown">
-                      <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
-                        id="dropdownOrder-7" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-2-line"></i>
-                      </button>
-                      <ul class="dropdown-menu dropdown" aria-labelledby="dropdownOrder-7">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>

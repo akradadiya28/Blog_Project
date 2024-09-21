@@ -83,7 +83,11 @@
         <span class="text-muted text-center d-block fw-bolder my-4">OR</span>
 
         <!-- Register Form-->
-        <form class="mt-4" action="/register" method="post">
+        <form class="mt-4" action="/register" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label class="form-label" for="register-fname">Upload Profile Image</label>
+            <input type="file" class="form-control" id="register-fname" name="userImg">
+          </div>
           <div class="form-group">
             <label class="form-label" for="register-fname">First name</label>
             <input type="text" class="form-control" id="register-fname" placeholder="Enter your first name"

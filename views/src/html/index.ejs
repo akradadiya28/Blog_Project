@@ -399,8 +399,7 @@
                         <button class="btn btn-link p-0 position-relative" type="button" id="profileDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <picture>
-                                <img class="f-w-10 rounded-circle" src="./assets/images/profile-small.jpeg"
-                                    alt="HTML Bootstrap Admin Template by Pixel Rocket">
+                                <img class="f-w-10 rounded-circle" src="<%=userImg%>" alt="<%=fname%> <%=lname%>">
                             </picture>
                             <span
                                 class="position-absolute bottom-0 start-75 p-1 bg-success border border-3 border-white rounded-circle">
@@ -2198,7 +2197,7 @@
                             <div class="collapse" id="collapseMenuItemPages">
                                 <ul class="submenu">
                                     <li><a href="./charts.html">Charts</a></li>
-                                    <li><a href="./user-listing.html">User Listing</a></li>
+                                    <li><a href="/user-listing">User Listing</a></li>
                                     <li><a href="/login">Login</a></li>
                                     <li><a href="/register">Register</a></li>
                                     <li><a href="./forgot-password.html">Forgot Password</a></li>
@@ -2239,7 +2238,7 @@
                                 <span class="menu-link">Users</span></a>
                             <div class="collapse" id="collapseMenuItemUsers">
                                 <ul class="submenu">
-                                    <li><a href="./user-listing.html">User Listing</a></li>
+                                    <li><a href="/user-listing">User Listing</a></li>
                                 </ul>
                             </div>
                         </li>

@@ -18,6 +18,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.use(express.static(reqPath));
+app.use("/public", express.static(path.join(__dirname, "/public")));
 app.use('/assets', express.static(path.join(__dirname, 'views/dist/assets')));
 app.use('/', router);
 

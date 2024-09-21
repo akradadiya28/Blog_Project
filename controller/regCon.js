@@ -1,4 +1,5 @@
 const userModel = require('../models/userModel');
+const fs = require('fs');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
@@ -15,12 +16,13 @@ const registerData = async (req, res) => {
         bcrypt.hash(req.body.pwd, saltRounds, async (err, hash) => {
 
             const userData = new userModel({
+                path: req.file.path,
                 fname: req.body.fname,
                 lname: req.body.lname,
                 email: req.body.email,
                 password: hash
             })
-            // console.log(userData);
+            console.log(userData);
 
             try {
                 const user = await userData.save();

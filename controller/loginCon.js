@@ -20,6 +20,7 @@ const loginData = async (req, res) => {
 
             if (result) {
                 res.cookie('userId', user[0]._id.toString());
+                res.cookie('userImg', user[0].path);
                 res.cookie('firstName', user[0].fname);
                 res.cookie('lastName', user[0].lname);
                 res.cookie('email', user[0].email);
